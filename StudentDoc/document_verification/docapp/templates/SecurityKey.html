@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CollegeSolution</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Soft Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//tags -->
+	<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="//fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+	    rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header" id="home">
+		<div class="content white agile-info">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						<a class="navbar-brand" href="index.html">
+							<h1  style="font-size:22px"><span class="fa fa-signal" aria-hidden="true"></span> College-E-Solution <label>Web App</label></h1>
+						</a>
+					</div>
+					<!--/.navbar-header-->
+
+					<?php include('user_menu.php');?>
+					<!--/.navbar-collapse-->
+					<!--/.navbar-->
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- banner -->
+	<div class="inner_page_agile">
+
+		<p>&nbsp;</p>
+
+</div>
+	<!--//banner -->
+	<!--/w3_short-->
+	<div class="services-breadcrumb_w3layouts"></div>
+<!--//w3_short-->
+	<!-- /inner_content -->
+	<div class="inner_content_info_agileits">
+		<div class="container">
+			<div class="tittle_head_w3ls">
+				<h3 class="tittle three">Document request</h3>
+		  </div>
+	  <div class="inner_sec_grids_info_w3ls">
+				<div class="signin-form">
+					<div class="login-form-rec">
+
+<form method="post">
+    {% csrf_token %}
+    <table border="1" width="400" height="400">
+        <tr>
+            <td>user_id</td>
+            <td><input type="text" name="t1"></td>
+        </tr>
+        <tr>
+            <td>security_key</td>
+            <td><input type="text" name="t2"></td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td><input type="text" name="t3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+</div>
+					<p>&nbsp;</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_w3ls">
+		<div class="container">
+			<div class="footer_bottom">
+				<div class="col-md-9 footer_bottom_grid">
+					<div class="footer_bottom1">
+						<a href="index.html">
+							<h2><span class="fa fa-signal" aria-hidden="true"></span> cOLLEGE E SOLUTION
+							  <label>Karnataka Unioversity Dharwad</label>
+							</h2>
+						</a>
+						<p>© 2020 Student Document Management. All rights reserved </p>
+				  </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- js -->
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<!-- password-script -->
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>

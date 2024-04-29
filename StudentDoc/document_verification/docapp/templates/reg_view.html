@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" width="400">
+<tr>
+    <td>name</td>
+    <td>city</td>
+    <td>address</td>
+    <td>email</td>
+    <td>contact</td>
+    <td>actions</td>
+</tr>
+
+
+    {% for i in userdict %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.contact}}</td>
+        <td><a href="{% url 'reg_del' i.id %}">delete</a></td>
+        <td><a href="{% url 'reg_update' i.id %}">update</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

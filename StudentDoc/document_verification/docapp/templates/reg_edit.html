@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>registration here</h1>
+<form method="post" action="{% url 'reg_db' %}">
+    {% csrf_token %}
+    <table border="1" width="400" height="400">
+        {% for i in userdict %}
+        <input type="hidden" name="id" value="{{i.id}}">
+        <tr>
+            <td>name</td>
+            <td><input type="text" name="t1" value="{{i.name}}"></td>
+        </tr>
+        <tr>
+            <td>city</td>
+            <td><input type="text" name="t2" value="{{i.city}}"></td>
+        </tr>
+        <tr>
+            <td>address</td>
+            <td><input type="text" name="t3" value="{{i.address}}"></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="text" name="t4" value="{{i.email}}"></td>
+        </tr>
+        <tr>
+            <td>contact</td>
+            <td><input type="text" name="t5" value="{{i.contact}}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+
+</body>
+</html>

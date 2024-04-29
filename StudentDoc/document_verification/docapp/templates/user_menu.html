@@ -1,0 +1,21 @@
+<div style="margin-left:349px" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-2" id="link-effect-2">
+							<ul class="nav navbar-nav">
+								<li><a href="{% url 'DocumentResult' %}" class="effect-3">Doc Request</a></li>
+                                <li><a href="{% url 'doc_status_view_c' %}" class="effect-3">Doc Status</a></li>
+                               
+                                
+                                <li><a href="{% url 'ComplaintDetails' %}" class="effect-3">Complaint</a></li>
+                                <li><a href="{% url 'ComplaintInfo_view_c' %}" class="effect-3">Complaint status</a></li>
+								 <li class="dropdown" style="margin-left:-10px;">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+                            <li><a href="{% url 'changepass' %}">Change Password</a></li>
+                                <li><a href="{% url 'index' %}" class="effect-3">Logout</a></li>
+                            </ul>
+                            </li>
+							</ul>
+						</nav>
+					</div>
